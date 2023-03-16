@@ -1,0 +1,26 @@
+﻿@model List<EscuelaBD.Models.clsSalon>
+
+<h1>Salones</h1>
+
+<p>
+    <a asp-action="Create">Crear</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Salon</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var salones in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(m=>salones.ID)</td>
+                <td>@Html.DisplayFor(m=>salones.Salon)</td> 
+                <td></td>
+            </tr>
+        }
+    </tbody>
+</table>

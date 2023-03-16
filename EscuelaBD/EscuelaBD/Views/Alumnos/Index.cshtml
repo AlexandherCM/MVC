@@ -1,0 +1,27 @@
+﻿@model List<EscuelaBD.Models.clsAlumno>
+
+<h1>Alumnos</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Matricula</th>
+            <th>Nombre</th>
+            <th>Edad</th>
+            <th>Salon</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var alumnos in Model)
+        {
+            <tr>
+                <th>@Html.DisplayFor(m=>alumnos.ID)</th>
+                <td>@Html.DisplayFor(m=>alumnos.Nombre)</td>
+                <td>@Html.DisplayFor(m=>alumnos.Edad)</td>
+                <td>@Html.DisplayFor(m=>alumnos.Salon.Salon)</td>
+                <td></td>
+            </tr>
+        }
+    </tbody>
+</table>
