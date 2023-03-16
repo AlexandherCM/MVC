@@ -17,10 +17,6 @@ namespace EscuelaBD.Controllers
         public async Task<IActionResult> Index()
             => View(await _context.Salones.ToListAsync());
         
-        public IActionResult Create()
-        {
-            ViewData["Salones"] = new SelectList(_context.Salones, "");
-            return View();
-        }
+        
     }
 }
