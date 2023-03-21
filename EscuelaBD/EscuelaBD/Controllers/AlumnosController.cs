@@ -33,7 +33,7 @@ namespace EscuelaBD.Controllers
         {
             if (ModelState.IsValid)
             {
-                var alumno = new clsAlumno()
+                clsAlumno alumno = new clsAlumno()
                 {
                     Nombre= model.Nombre,
                     Edad = model.Edad,

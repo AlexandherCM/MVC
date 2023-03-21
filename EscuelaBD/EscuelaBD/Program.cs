@@ -8,7 +8,7 @@ builder.Services.AddControllersWithViews();
 
 // Inyección de dependencias - - - - - - - - - - - - - - - - - - - - 
 builder.Services.AddDbContext<Modelo>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("ModeloConnection"))
+    options.UseSqlServer(builder.Configuration.GetConnectionString("Modelo2Connection"))
 );
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - }
 
