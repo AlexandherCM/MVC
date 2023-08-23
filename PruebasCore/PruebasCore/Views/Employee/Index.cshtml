@@ -1,0 +1,32 @@
+﻿@model IEnumerable<PruebasCore.Models.Employee>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<a asp-action="Create">Registrar Empleado</a>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(model=>model.Name)</th>
+            <th>@Html.DisplayNameFor(model=>model.Phone)</th>
+            <th>@Html.DisplayNameFor(model=>model.Salary)</th>
+            <th>@Html.DisplayNameFor(model=>model.company)</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var employee in Model)
+        {
+              <tr>
+                  <td>@Html.DisplayFor(m=>employee.Name)</td>
+                  <td>@Html.DisplayFor(m=>employee.Phone)</td>
+                  <td>@Html.DisplayFor(m=>employee.Salary)</td>
+                  <td>@Html.DisplayFor(m=>employee.company.Name)</td>
+              </tr>
+        }
+    </tbody>
+</table>
+
